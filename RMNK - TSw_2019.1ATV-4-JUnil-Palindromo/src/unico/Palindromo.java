@@ -12,6 +12,7 @@ public class Palindromo implements PalindromoInterface {
 		System.out.println(str);
 		str = removeAcentuacao(str);
 		System.out.println(str);
+		
 		char [] letras = str.toUpperCase().toCharArray();
 		int tamanho = str.length();
 		
@@ -24,11 +25,26 @@ public class Palindromo implements PalindromoInterface {
 		
 		return true;
 	}
-
+	
 	public static String removeAcentuacao(String str) { 
 		str = str.replaceAll("[aáàãâä]","a");
 		str = str.replaceAll("[?!]","");
-		
+		str = str.replaceAll("[ÂÀÁÄÃ]","A"); 
+	    str = str.replaceAll("[âãàáä]","a"); 
+	    str = str.replaceAll("[ÊÈÉË]","E"); 
+	    str = str.replaceAll("[êèéë]","e"); 
+	    str = str.replaceAll("ÎÍÌÏ","I"); 
+	    str = str.replaceAll("îíìï","i"); 
+	    str = str.replaceAll("[ÔÕÒÓÖ]","O"); 
+	    str = str.replaceAll("[ôõòóö]","o"); 
+	    str = str.replaceAll("[ÛÙÚÜ]","U"); 
+	    str = str.replaceAll("[ûúùü]","u"); 
+	    str = str.replaceAll("Ç","C"); 
+	    str = str.replaceAll("ç","c");  
+	    str = str.replaceAll("[ıÿ]","y"); 
+	    str = str.replaceAll("İ","Y"); 
+	    str = str.replaceAll("ñ","n"); 
+	    str = str.replaceAll("Ñ","N");
 		return str;
 	}
 }

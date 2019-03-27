@@ -66,13 +66,14 @@ class PalindromoTeste {
 		assertEquals(true, palindromo.isPalindromo(palavra));
 	}
 	
-	/*@Test
+	@Test
 	void testIsPalindromoAcentuacao() {
 		
 		palindromo = new Palindromo();
 		String palavra = "Após a Sopa";
 		assertEquals(true, palindromo.isPalindromo(palavra));
-	}*/
+	}
+	
 	@Test
 	void testIsPalindromoMultipleEspaco() {
 		
@@ -81,10 +82,10 @@ class PalindromoTeste {
 		assertEquals(true, palindromo.isPalindromo(palavra));
 	}
 	@Test
-	void testIsPalindromoPontuacao() {		
+	void testIsPalindromoPontuacaoEsclamaInterroga() {		
 		palindromo = new Palindromo();
 		String palavra = "A Daniela ama a lei? Nada!";
-		assertEquals(true, palindromo.isPalindromo(palavra));
+		assertEquals(true, palindromo.isPalindromo(palavra));	
 	}
 	
 	@Test
