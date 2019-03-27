@@ -82,7 +82,7 @@ class PalindromoTeste {
 		assertEquals(true, palindromo.isPalindromo(palavra));
 	}
 	@Test
-	void testIsPalindromoPontuacaoEsclamaInterroga() {		
+	void testIsPalindromoEsclamaInterroga() {		
 		palindromo = new Palindromo();
 		String palavra = "A Daniela ama a lei? Nada!";
 		assertEquals(true, palindromo.isPalindromo(palavra));	
@@ -92,6 +92,20 @@ class PalindromoTeste {
 	void testIsPalindromoInvalido() {		
 		palindromo = new Palindromo();
 		String palavra = "Teste utilizando jUnit";
+		assertEquals(false, palindromo.isPalindromo(palavra));
+	}
+	
+	@Test
+	void testIsPalindromoCedilha() {
+		palindromo = new Palindromo();
+		String palavra = "Me vê se a panela da moça é de aço, Madalena Paes, e vem.";
+		assertEquals(false, palindromo.isPalindromo(palavra));
+	}
+	
+	@Test
+	void testIsPalindromoAspas() {
+		palindromo = new Palindromo();
+		String palavra = "Luza Rocelina, a namorada do Manuel, leu na moda da romana: \"anil é cor azul\".";
 		assertEquals(false, palindromo.isPalindromo(palavra));
 	}
 }
